@@ -52,16 +52,18 @@ Il s'agit d'une plateforme web présentant un service d'éco-mobilité innovant 
 - Design aligné avec l'image de marque OpenAI
 
 ## 📁 Structure du Projet
+```
 project-root/
 ├── assets/
 │   └── fonts/
-│       └── stylesheet.css                  # Définitions des polices Söhne
+│       └── stylesheet.css         # Définitions des polices Söhne
 ├── docs/
-│   └── realisation.mdx                     # Documentation détaillée du projet
+│   └── realisation.mdx            # Documentation détaillée du projet
 ├── styles/
-│   └── styles.css                          # Styles globaux
-├── index.html                              # Page principale
-└── README.md                               # Documentation du projet
+│   └── styles.css                 # Styles globaux
+├── index.html                     # Page principale
+└── README.md                      # Documentation du projet
+```
 
 ## 🎨 Design System
 ### Typographie
