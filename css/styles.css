@@ -3,7 +3,7 @@
 
 body {
     background-color: #000000;
-    font-family: 'sohnebuch', sans-serif;
+    font-family: 'shnebuch', sans-serif;
 }
 
 /* 
@@ -24,12 +24,14 @@ body {
 
 .footer {
     max-width: 1200px; /* Desired maximum width */
-    margin: 4rem auto 0.5rem; /* Top and bottom margins */
+    margin: 4rem 0.5rem; /* Top, left/right, and bottom margins */
     transition: opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), 
                 transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), 
                 filter 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
     padding: 2rem; /* Add padding for spacing */
     color: #ffffff; /* White text */
+    font-size: 13.48px;
+    font-family: 'shnebuch', sans-serif;
 }
 
 .footer-container {
@@ -41,10 +43,12 @@ body {
 .footer-section {
     flex: 1; /* Equal width for each section */
     margin: 1rem; /* Space between sections */
+    margin-bottom: 4rem;
 }
 
-.footer-section h4 {
+.footer-section span {
     margin-bottom: 1rem; /* Space below headings */
+    color: #B4B4B4;
 }
 
 .footer-section ul {
@@ -53,7 +57,7 @@ body {
 }
 
 .footer-section li {
-    margin: 0.5rem 0; /* Space between list items */
+    margin: 1.4rem 0; /* Space between list items */
 }
 
 .footer-section a {
@@ -65,7 +69,61 @@ body {
     text-decoration: underline; /* Underline on hover */
 }
 
-.footer-bottom {
-    text-align: center; /* Center the bottom text */
-    margin-top: 2rem; /* Space above */
+.bottom .footer-bottom {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom .footer-bottom p {
+    margin-right: 1rem; /* Space between copyright and cookies*/
+}
+
+.bottom .footer-bottom a {
+    color: #FFFFFF; /* White color for the link */
+    text-decoration: none; /* No underline by default */
+    position: relative; /* Necessary for the pseudo-element */
+    transition: color 0.3s ease; /* Animation for the color */
+}
+
+.bottom .footer-bottom a::after {
+    content: ''; /* Necessary to create a pseudo-element */
+    display: block; /* Allows control over the size */
+    height: 1px; /* Thickness of the underline */
+    background-color: #616161; /* Gray color for the underline */
+    transition: background-color 0.3s ease; /* Animation for the underline */
+    width: 100%; /* Takes the full width of the link */
+    position: absolute; /* Positioning relative to the link */
+    left: 0; /* Aligns to the left */
+    bottom: -1px; /* Positions the underline just below the text */
+}
+
+.bottom .footer-bottom a:hover {
+    color: #FFFFFF; /* White color on hover */
+}
+
+.bottom .footer-bottom a:hover::after {
+    background-color: #FFFFFF; /* Underline becomes white on hover */
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom .social {
+    display: flex;
+    gap: 2.125625rem;
+}
+
+.bottom .social a {
+    text-decoration-color: #FFFFFF;
+    color: #FFFFFF;
+    flex-direction: row;
+    margin: auto;
+}
+
+.bottom .social svg {
+    text-decoration-color: #FFFFFF;
+    color: #FFFFFF;
 }
