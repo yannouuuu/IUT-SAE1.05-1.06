@@ -38,11 +38,13 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    width: 100%;
+    padding: 2rem 1.875rem;
 }
 
 .footer-section {
     flex: 1; /* Equal width for each section */
-    margin: 1rem; /* Space between sections */
+    margin: 0 1.875rem; /* Space between sections */
     margin-bottom: 4rem;
 }
 
