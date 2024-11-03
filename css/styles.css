@@ -1,2 +1,55 @@
 /* The stylesheet is only for index.html not the other subpages */
 @import url('../assets/fonts/stylesheet.css');
+
+body {
+    background-color: #000000;
+    font-family: 'sohnebuch', sans-serif;
+}
+
+.footer {
+    max-width: 1200px; /* Desired maximum width */
+    margin: 4rem auto 0.5rem; /* Top and bottom margins */
+    transition: opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), 
+                transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), 
+                filter 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    padding: 2rem; /* Add padding for spacing */
+    color: #ffffff; /* White text */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-section {
+    flex: 1; /* Equal width for each section */
+    margin: 1rem; /* Space between sections */
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem; /* Space below headings */
+}
+
+.footer-section ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-section li {
+    margin: 0.5rem 0; /* Space between list items */
+}
+
+.footer-section a {
+    color: #ffffff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer-bottom {
+    text-align: center; /* Center the bottom text */
+    margin-top: 2rem; /* Space above */
+}
