@@ -54,6 +54,24 @@ body {
     cursor: pointer;
 }
 
+.tab-bar-search {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-icon {
+    width: 14px; /* Ajuste la taille du SVG */
+    height: 14px;
+    color: #ffffff; /* Couleur de la loupe */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tab-bar-search:hover .search-icon {
+    color: #B4B4B4; /* Change la couleur de la loupe au survol */
+    transform: scale(1.1); /* Agrandit légèrement la loupe au survol */
+}
+
 
 /* 
     HEADER 
