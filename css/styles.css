@@ -81,6 +81,66 @@ body {
     MAIN 
 */
 
+/* Section de recherche */
+.search-section {
+    text-align: center;
+    padding: 2rem 0;
+    color: #ffffff;
+}
+
+.search-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #B4B4B4;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.form-group input::placeholder {
+    color: #666666;
+}
+
+.search-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #B4B4B4;
+}
+
 /* 
     FOOTER 
 */
@@ -225,4 +285,120 @@ body {
 .bottom .social svg {
     text-decoration-color: #FFFFFF;
     color: #FFFFFF;
+}
+
+/* 
+    LOGIN
+*/
+.login-section {
+    max-width: 400px;
+    margin: 5rem auto;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.login-section h1 {
+    margin-bottom: 2rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login-form .form-group {
+    text-align: left;
+}
+
+.login-form input {
+    width: 100%;
+}
+
+.login-button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #B4B4B4;
+}
+
+.login-section p {
+    margin-top: 1rem;
+}
+
+.login-section a {
+    color: #B4B4B4;
+    text-decoration: underline;
+}
+
+/* 
+    PROFILES 
+*/
+
+/* Section des profils */
+.profiles-section {
+    padding: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.profiles-section h1 {
+    margin-bottom: 2rem;
+}
+
+.profiles-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.profile-card {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-card h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-card p {
+    margin: 0.5rem 0;
+}
+
+.select-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.select-button:hover {
+    background-color: #B4B4B4;
 }
