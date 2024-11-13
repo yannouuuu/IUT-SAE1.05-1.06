@@ -8,23 +8,23 @@ Il s'agit d'une plateforme web présentant un service d'éco-mobilité innovant 
 ### Structure & Setup
 - [x] Initialisation du projet
 - [x] Mise en place des polices Söhne
-- [ ] Structure HTML de base
-- [ ] Configuration des styles globaux
+- [x] Structure HTML de base
+- [x] Configuration des styles globaux
 
 ### Page d'accueil
-- [ ] Header avec navigation
+- [x] Header avec navigation
 - [ ] Section hero
 - [ ] Présentation des services
-- [ ] Footer
+- [x] Footer
 
 ### OpenAI Shuttle
-- [ ] Design des cartes de navettes
-- [ ] Interface de réservation
+- [x] Design des cartes de navettes
+- [x] Interface de réservation
 - [ ] Carte interactive des trajets
-- [ ] Horaires dynamiques
+- [x] Horaires dynamiques
 
 ### OpenAI Connect (Covoiturage)
-- [ ] Interface de recherche
+- [x] Interface de recherche
 - [ ] Système de matching
 - [ ] Profils utilisateurs
 - [ ] Système de notification
