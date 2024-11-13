@@ -463,3 +463,12 @@ body {
 .select-button:hover {
     background-color: #B4B4B4;
 }
+/* Note en étoiles */
+.profile-rating {
+    font-size: 1.5rem;
+    color: #ffd700; /* Couleur dorée pour les étoiles */
+}
+
+.profile-rating .star {
+    margin: 0 0.1rem;
+}
