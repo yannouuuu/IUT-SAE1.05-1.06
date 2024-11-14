@@ -202,6 +202,70 @@ body {
     }
 }
 
+/* Section de présentation du covoiturage */
+.carpool-info-section {
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.carpool-info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.carpool-details {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.carpool-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carpool-details ul li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #b4b4b4;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.carpool-details ul li::before {
+    content: "•";
+    color: #76fc4d; /* Couleur dorée pour les puces */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Galerie d'images */
+.carpool-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.carpool-gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.carpool-gallery img:hover {
+    transform: scale(1.05);
+}
+
 /* 
     FOOTER 
 */
