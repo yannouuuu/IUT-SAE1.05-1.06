@@ -202,68 +202,78 @@ body {
     }
 }
 
-/* Section de présentation du covoiturage */
-.carpool-info-section {
-    padding: 2rem;
-    background-color: #1a1a1a;
-    color: #fff;
-    text-align: center;
-    border-radius: 12px;
-    margin: 2rem auto;
-    max-width: 800px;
-}
-
-.carpool-info-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #fff;
-}
-
-.carpool-details {
-    text-align: left;
-    margin-bottom: 2rem;
-}
-
-.carpool-details ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.carpool-details ul li {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-    color: #b4b4b4;
-    padding-left: 1rem;
-    position: relative;
-}
-
-.carpool-details ul li::before {
-    content: "•";
-    color: #76fc4d; /* Couleur dorée pour les puces */
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-/* Galerie d'images */
-.carpool-gallery {
+/* Section contenant toutes les cartes */
+.shuttle-info-section {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.carpool-gallery img {
-    width: 150px;
-    height: 150px;
+/* Style des cartes */
+.shuttle-card {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.shuttle-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.shuttle-image {
+    flex: 1;
+}
+
+.shuttle-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #333333;
     border-radius: 8px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    background-color: #333;
 }
 
-.carpool-gallery img:hover {
-    transform: scale(1.05);
+.shuttle-description {
+    flex: 1;
+}
+
+.shuttle-description h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ffffff; /* Titre en blanc */
+}
+
+.shuttle-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #b4b4b4;
+}
+
+/* Styles pour inverser l'ordre de l'image et du texte */
+.shuttle-card.reversed .shuttle-content {
+    flex-direction: row-reverse;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .shuttle-content {
+        flex-direction: column;
+    }
+
+    .shuttle-card.reversed .shuttle-content {
+        flex-direction: column; /* Supprime l'inversion sur les petits écrans */
+    }
+
+    .shuttle-description {
+        text-align: center;
+    }
 }
 
 /* 
