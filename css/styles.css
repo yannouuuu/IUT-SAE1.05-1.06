@@ -273,7 +273,7 @@ body {
 .footer {
     max-width: 1125px; /* Desired maximum width */
     margin: 10.113125rem auto 2.125625rem auto; /* Top, right, bottom, left margins */
-    color: #ffffff; /* White text */
+    color: #ffffff; 
     line-height: 24px;
     position: static;
     z-index: auto;
@@ -285,7 +285,9 @@ body {
 
 .footer-container {
     display: flex;
-    gap: 2.84375rem; /* Space between sections */
+    justify-content: space-between; 
+    margin-right: 3rem;
+    gap: 5rem; /* Space between sections */
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     flex-direction: row;
     margin-bottom: 108px;
@@ -310,6 +312,10 @@ body {
     }
 }
 
+.footer-section{
+    display: flex;
+}
+
 .footer-section span {
     margin-bottom: 1rem; /* Space below headings */
     color: #B4B4B4;
@@ -321,7 +327,7 @@ body {
 }
 
 .footer-section li {
-    margin: 1.4rem 0; /* Space between list items */
+    margin: 1rem 0; /* Space between list items */
 }
 
 .footer-bottom .copyright {
