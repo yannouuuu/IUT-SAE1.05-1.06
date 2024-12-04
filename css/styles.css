@@ -2,6 +2,7 @@
 @import url('../assets/fonts/stylesheet.css');
 
 *::selection{
+    color: #000000;
     background-color: #FFFFFF;
 }
 
