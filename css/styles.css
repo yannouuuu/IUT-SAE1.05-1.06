@@ -212,67 +212,92 @@ body {
     margin: 0 auto;
 }
 
-/* Style des cartes */
+/* Cartes */
 .shuttle-card {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.shuttle-content {
     display: flex;
     align-items: center;
     gap: 2rem;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Inverser l'ordre pour une carte alternée */
+.shuttle-card.reversed {
+    flex-direction: row-reverse;
+}
+
+/* Image */
 .shuttle-image {
     flex: 1;
+    height: 100%;
 }
 
 .shuttle-image img {
     width: 100%;
-    height: auto;
-    border: 1px solid #333333;
-    border-radius: 8px;
-    background-color: #333;
+    height: 100%;
+    object-fit: cover; /* L'image remplit tout l'espace */
 }
 
-.shuttle-description {
+/* Texte */
+.shuttle-text {
     flex: 1;
+    padding: 2rem;
 }
 
-.shuttle-description h2 {
+.shuttle-text h2 {
     font-size: 1.75rem;
     font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #ffffff; /* Titre en blanc */
+    margin-bottom: 1rem;
+    color: #ffffff;
 }
 
-.shuttle-description p {
+.shuttle-text p {
     font-size: 1.1rem;
     line-height: 1.6;
+    margin-bottom: 1.5rem;
     color: #b4b4b4;
 }
 
-/* Styles pour inverser l'ordre de l'image et du texte */
-.shuttle-card.reversed .shuttle-content {
-    flex-direction: row-reverse;
+.shuttle-links {
+    display: flex;
+    gap: 1.5rem;
 }
 
-/* Responsive pour petits écrans */
+.shuttle-links a {
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.shuttle-links a:hover {
+    color: #b4b4b4;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .shuttle-content {
+    .shuttle-card {
         flex-direction: column;
+        gap: 1rem;
     }
 
-    .shuttle-card.reversed .shuttle-content {
-        flex-direction: column; /* Supprime l'inversion sur les petits écrans */
+    .shuttle-card.reversed {
+        flex-direction: column; /* Supprime l'inversion */
     }
 
-    .shuttle-description {
+    .shuttle-image, .shuttle-text {
+        width: 100%;
+    }
+
+    .shuttle-text {
         text-align: center;
+    }
+
+    .shuttle-links {
+        justify-content: center;
     }
 }
 
