@@ -1,14 +1,16 @@
 /* The stylesheet is only for index.html not the other subpages */
 @import url('../assets/fonts/stylesheet.css');
 
+*::selection{
+    background-color: #FFFFFF;
+}
+
 body {
     background-color: #000000;
     font-family: 'shnebuch', sans-serif;
 }
 
-/* 
-    NAV 
-*/
+
 /* NAVIGATION BAR */
 .tab-bar {
     display: flex;
@@ -180,7 +182,6 @@ body {
     box-sizing: border-box;
 }
 
-
 .map {
     width: 100%;
     height: 100%;
@@ -206,7 +207,7 @@ body {
 .shuttle-info-section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 14rem;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -264,6 +265,7 @@ body {
 .shuttle-links {
     display: flex;
     gap: 1.5rem;
+    justify-content: space-between;
 }
 
 .shuttle-links a {
@@ -571,7 +573,7 @@ body {
 /* Note en étoiles */
 .profile-rating {
     font-size: 1.5rem;
-    color: #ffd700; /* Couleur dorée pour les étoiles */
+    color: #ffd700;
 }
 
 .profile-rating .star {
