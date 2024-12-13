@@ -1,5 +1,23 @@
-# IUT-SAE1.05-1.06
-Module d'initiation au développement simple en BUT1 d'Informatique.
+<br/>
+<p align="center">
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://github.com/yannouuuu/IUT-SAE1.01/raw/main/.github/assets/header_univlille_light.png" width="200px">
+        <img alt="UnivLilleLogo" src="https://github.com/yannouuuu/IUT-SAE1.01/raw/main/.github/assets/header_univlille_dark.png" width="200px">
+    </picture>
+  <h1 align="center">IUT-SAE1.05-1.06 | OpenShuttle</h1>
+</p>
+
+<p align="center">
+    Module d'initiation au développement web simple en BUT1 d'Informatique
+    <br/>
+    <br/>
+    <a href="https://moodle.univ-lille.fr/course/view.php?id=30388&sectionid=262716"><strong>Voir la page sur le moodle »</strong></a>
+    <br/>
+    <br/>
+    <a href="https://github.com/yannouuuu/IUT-SAE1.05-1.06"><strong>Voir le projet complet sur GitHub »</strong></a>
+</p>
+
+<br/>
 
 ## 📋 Description du Projet
 Il s'agit d'une plateforme web présentant un service d'éco-mobilité innovant pour OpenAI, visant à encourager les employés à adopter des modes de transport durables.
