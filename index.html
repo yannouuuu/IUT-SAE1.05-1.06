@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenAI - Service de mobilité</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/openai.ico">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
 </head>
@@ -35,7 +36,7 @@
         <section class="carpool-search-section">
             <div class="carpool-search-container">
                 <h1>Organisez votre covoiturage</h1>
-                <form class="carpool-search-form" action="#" method="GET">
+                <form class="carpool-search-form" action="#notification" method="GET">
                     <div class="form-group">
                         <label for="pickup">Lieu de prise en charge</label>
                         <input type="text" id="pickup" name="pickup" placeholder="Ex : 123 Rue de la Paix, Paris">
@@ -61,8 +62,9 @@
                             <input type="time" id="time" name="time">
                         </div>
                     </div>
-                    <button type="submit" class="search-button">Organiser le covoiturage</button>
+                    <a href="#notification" class="search-button">Organiser le covoiturage</a>
                 </form>
+                <div id="notification" class="notification">Vous avez cliqué sur le bouton</div>
             </div>
             <div class="map-placeholder">
                 <!-- Carte OpenStreetMap intégrée avec iframe -->
@@ -80,46 +82,56 @@
         </section>
         <section class="shuttle-info-section">
             <!-- Carte 1 -->
-            <div class="shuttle-card">
-                <div class="shuttle-image">
-                    <img src="./assets/img/covoiturage1.jpg" alt="Illustration OpenShuttle">
-                </div>
-                <div class="shuttle-text">
-                    <h2>OpenShuttle - Mobilité Simplifiée</h2>
-                    <p>OpenShuttle facilite les déplacements de vos collaborateurs grâce à un service rapide et sécurisé, adapté aux besoins de votre entreprise. Idéal pour les déplacements réguliers entre les bureaux.</p>
-                    <div class="shuttle-links">
-                        <a href="#">En savoir plus &gt;</a>
-                        <a href="#">Contactez-nous &gt;</a>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">OpenShuttle - Mobilité Simplifiée</h3>
+                        <div class="card-description">
+                            <p>OpenShuttle facilite les déplacements de vos collaborateurs grâce à un service rapide et sécurisé, adapté aux besoins de votre entreprise.</p>
+                        </div>
+                        <div class="card-links">
+                            <a class="card-link" href="/index/planning-for-agi-and-beyond/">Read our plan for AGI</a>
+                            <a class="card-link" href="/charter/">Read our Charter</a>
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <img alt="OpenShuttle Image" loading="lazy" decoding="async" src="path/to/your/image1.jpg">
                     </div>
                 </div>
             </div>
             
             <!-- Carte 2 (inversée) -->
-            <div class="shuttle-card reversed">
-                <div class="shuttle-image">
-                    <img src="https://via.placeholder.com/800x600" alt="Illustration Environnement">
-                </div>
-                <div class="shuttle-text">
-                    <h2>Avantages Environnementaux</h2>
-                    <p>En utilisant OpenShuttle, vous contribuez à la réduction des émissions de CO₂. Chaque trajet partagé aide à diminuer l'empreinte carbone de votre entreprise, tout en favorisant une mobilité durable.</p>
-                    <div class="shuttle-links">
-                        <a href="#">Découvrez nos initiatives &gt;</a>
-                        <a href="#">Lire notre rapport &gt;</a>
+            <div class="card-container">
+                <div class="card reversed">
+                    <div class="card-content">
+                        <h3 class="card-title">Avantages Environnementaux</h3>
+                        <div class="card-description">
+                            <p>En utilisant OpenShuttle, vous contribuez à la réduction des émissions de CO₂. Chaque trajet partagé aide à diminuer l'empreinte carbone de votre entreprise, tout en favorisant une mobilité durable.</p>
+                        </div>
+                        <div class="card-links">
+                            <a class="card-link" href="/index/environmental-benefits/">Read more about environmental benefits</a>
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <img alt="Environmental Benefits Image" loading="lazy" decoding="async" src="path/to/your/image2.jpg">
                     </div>
                 </div>
             </div>
             
             <!-- Carte 3 -->
-            <div class="shuttle-card">
-                <div class="shuttle-image">
-                    <img src="https://via.placeholder.com/800x600" alt="Illustration Économies">
-                </div>
-                <div class="shuttle-text">
-                    <h2>Économies pour votre Entreprise</h2>
-                    <p>Avec OpenShuttle, réduisez les coûts liés aux transports individuels et aux remboursements kilométriques. Partager les trajets permet de réaliser des économies substantielles pour l'entreprise.</p>
-                    <div class="shuttle-links">
-                        <a href="#">Voir les bénéfices &gt;</a>
-                        <a href="#">Contactez notre équipe &gt;</a>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Économies pour votre Entreprise</h3>
+                        <div class="card-description">
+                            <p>Avec OpenShuttle, réduisez les coûts liés aux transports individuels et aux remboursements kilométriques. Partager les trajets permet de réaliser des économies substantielles pour l'entreprise.</p>
+                        </div>
+                        <div class="card-links">
+                            <a class="card-link" href="/index/economic-benefits/">Read more about economic benefits</a>
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <img alt="Economic Benefits Image" loading="lazy" decoding="async" src="path/to/your/image3.jpg">
                     </div>
                 </div>
             </div>

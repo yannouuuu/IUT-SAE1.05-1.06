@@ -156,21 +156,49 @@ body {
 
 /* Bouton de recherche */
 .search-button {
-    background-color: #ffffff;
+    background: #ffffff;
     color: #000;
-    padding: 1rem;
+    padding: 1rem 2rem;
     font-size: 1rem;
     font-weight: bold;
-    border: none;
+    border: 2px solid #ffffff;
     border-radius: 8px;
     cursor: pointer;
     text-align: center;
     margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.search-button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #000000;
+    z-index: -1;
+    transition: height 0.4s ease-in-out;
 }
 
 .search-button:hover {
-    background-color: #b4b4b4;
-    color: #000;
+    color: #ffffff;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+}
+
+.search-button:hover::before {
+    height: 100%;
+}
+
+.search-button:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    transition: all 0.1s ease;
 }
 
 /* Carte */
@@ -224,14 +252,13 @@ body {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
-/* Inverser l'ordre pour une carte alternée */
-.shuttle-card.reversed {
-    flex-direction: row-reverse;
+.shuttle-card:hover {
+    transform: scale(1.05);
 }
 
-/* Image */
 .shuttle-image {
     flex: 1;
     height: 100%;
@@ -239,45 +266,29 @@ body {
 
 .shuttle-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* L'image remplit tout l'espace */
+    height: auto;
+    object-fit: cover;
 }
 
-/* Texte */
-.shuttle-text {
-    flex: 1;
-    padding: 2rem;
+.shuttle-description {
+    flex: 2;
+    padding: 1rem;
 }
 
-.shuttle-text h2 {
-    font-size: 1.75rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #ffffff;
+.shuttle-description h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.shuttle-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    color: #b4b4b4;
-}
-
-.shuttle-links {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: space-between;
-}
-
-.shuttle-links a {
+.shuttle-description p {
     font-size: 1rem;
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    line-height: 1.5;
+    color: #b4b4b4;
 }
 
-.shuttle-links a:hover {
-    color: #b4b4b4;
+/* Inverser l'ordre pour une carte alternée */
+.shuttle-card.reversed {
+    flex-direction: row-reverse;
 }
 
 /* Responsive */
@@ -291,11 +302,11 @@ body {
         flex-direction: column; /* Supprime l'inversion */
     }
 
-    .shuttle-image, .shuttle-text {
+    .shuttle-image, .shuttle-description {
         width: 100%;
     }
 
-    .shuttle-text {
+    .shuttle-description {
         text-align: center;
     }
 
@@ -579,4 +590,105 @@ body {
 
 .profile-rating .star {
     margin: 0 0.1rem;
+}
+
+.card-container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: auto;
+    padding: 2rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #1a1a1a; /* Background color for the card */
+    color: #ffffff; /* Text color */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    padding: 1.5rem; /* Add padding for better spacing */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-title {
+    font-size: 1.5rem; /* Title size */
+    margin-bottom: 0.5rem; /* Space below title */
+    font-weight: bold; /* Make title bold */
+}
+
+.card-description {
+    color: #b4b4b4; /* Description text color */
+    margin-bottom: 1rem; /* Space below description */
+}
+
+.card-links {
+    display: flex;
+    gap: 1rem; /* Space between links */
+}
+
+.card-link {
+    color: #ffffff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.card-link:hover {
+    color: #B4B4B4; /* Change color on hover */
+}
+
+.card-image {
+    flex: 2; /* Image takes more space */
+}
+
+.card-image img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area */
+    border-radius: 12px; /* Rounded corners for the image */
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.notification:target {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+    0%, 66% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.search-button {
+    display: inline-block;
+    text-decoration: none;
+    /* Gardez les styles existants du bouton */
 }
