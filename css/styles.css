@@ -14,9 +14,12 @@ body {
 
 /* NAVIGATION BAR */
 .tab-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
-    justify-content: space-between; /* Espace entre les éléments */
-    align-items: center; /* Alignement vertical centré */
+    justify-content: space-between;
+    align-items: center;
     background-color: #000000;
     padding: 1rem 2rem;
     color: #ffffff;
@@ -73,11 +76,6 @@ body {
     transform: scale(1.1);
 }
 
-
-/* 
-    HEADER 
-*/
-
 /* 
     MAIN 
 */
@@ -85,7 +83,7 @@ body {
 .carpool-search-section {
     display: flex;
     justify-content: center;
-    align-items: stretch; /* Assure la même hauteur pour les éléments flex */
+    align-items: stretch;
     gap: 2rem;
     padding: 2rem;
     max-width: 1000px;
@@ -167,6 +165,8 @@ body {
     text-align: center;
     margin-top: 1rem;
     position: relative;
+    text-decoration: none;
+    display: inline-block;
     z-index: 1;
     overflow: hidden;
     transition: color 0.4s ease-in-out, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
@@ -204,7 +204,7 @@ body {
 /* Carte */
 .map-placeholder {
     flex: 2; /* Prend plus de place que le formulaire */
-    height: auto; /* Assure que la hauteur s'ajuste pour correspondre au formulaire */
+    height: auto;
     background-color: #333;
     border-radius: 12px;
     overflow: hidden;
@@ -261,13 +261,17 @@ body {
 
 .shuttle-image {
     flex: 1;
-    height: 100%;
+    min-width: 300px;
+    position: relative;
 }
 
 .shuttle-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .shuttle-description {
@@ -313,6 +317,11 @@ body {
     .shuttle-links {
         justify-content: center;
     }
+
+    .shuttle-image {
+        min-width: 100%;
+        height: 300px;
+    }
 }
 
 /* 
@@ -320,7 +329,7 @@ body {
 */
 
 .footer {
-    max-width: 1125px; /* Desired maximum width */
+    max-width: 1125px;
     margin: 10.113125rem auto 2.125625rem auto; /* Top, right, bottom, left margins */
     color: #ffffff; 
     line-height: 24px;
@@ -336,8 +345,8 @@ body {
     display: flex;
     justify-content: space-between; 
     margin-right: 3rem;
-    gap: 5rem; /* Space between sections */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 5rem;
+    flex-wrap: wrap; 
     flex-direction: row;
     margin-bottom: 108px;
 }
@@ -364,19 +373,18 @@ body {
 .footer-section{
     display: flex;
 }
-
 .footer-section span {
-    margin-bottom: 1rem; /* Space below headings */
+    margin-bottom: 1rem;
     color: #B4B4B4;
 }
 
 .footer-section ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
+    list-style: none;
+    padding: 0;
 }
 
 .footer-section li {
-    margin: 1rem 0; /* Space between list items */
+    margin: 1rem 0;
 }
 
 .footer-bottom .copyright {
@@ -384,12 +392,12 @@ body {
 }
 
 .footer-section a {
-    color: #ffffff; /* Link color */
-    text-decoration: none; /* Remove underline */
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .footer-section a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
 .first-section {
@@ -402,36 +410,34 @@ body {
     display: flex;
     flex-direction: row;
 }
+  .bottom .footer-bottom p {
+      margin-right: 1rem;
+  }
 
-.bottom .footer-bottom p {
-    margin-right: 1rem; /* Space between copyright and cookies*/
-}
+  .bottom .footer-bottom a {
+      color: #FFFFFF;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
+  }
 
-.bottom .footer-bottom a {
-    color: #FFFFFF; /* White color for the link */
-    text-decoration: none; /* No underline by default */
-    position: relative; /* Necessary for the pseudo-element */
-    transition: color 0.3s ease; /* Animation for the color */
-}
-
-.bottom .footer-bottom a::after {
-    content: ''; /* Necessary to create a pseudo-element */
-    display: block; /* Allows control over the size */
-    height: 1px; /* Thickness of the underline */
-    background-color: #616161; /* Gray color for the underline */
-    transition: background-color 0.3s ease; /* Animation for the underline */
-    width: 100%; /* Takes the full width of the link */
-    position: absolute; /* Positioning relative to the link */
-    left: 0; /* Aligns to the left */
-    bottom: -1px; /* Positions the underline just below the text */
-}
-
+  .bottom .footer-bottom a::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: #616161;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -1px; 
+  }
 .bottom .footer-bottom a:hover {
-    color: #FFFFFF; /* White color on hover */
+    color: #FFFFFF; 
 }
 
 .bottom .footer-bottom a:hover::after {
-    background-color: #FFFFFF; /* Underline becomes white on hover */
+    background-color: #FFFFFF; 
 }
 
 .bottom {
@@ -442,11 +448,11 @@ body {
 @media (max-width: 768px) {
     .bottom {
         flex-direction: column;
-        align-items: center; /* Centre les éléments */
+        align-items: center; 
     }
 
     .bottom .social {
-        margin-bottom: 1rem; /* Espace entre social et footer-bottom */
+        margin-bottom: 1rem; 
     }
 }
 
@@ -593,7 +599,7 @@ body {
 }
 
 .card-container {
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 1200px; 
     margin: auto;
     padding: 2rem;
 }
@@ -602,13 +608,13 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
-    background-color: #1a1a1a; /* Background color for the card */
-    color: #ffffff; /* Text color */
+    background-color: #1a1a1a; 
+    color: #ffffff; 
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    padding: 1.5rem; /* Add padding for better spacing */
+    padding: 1.5rem; 
 }
 
 .card:hover {
@@ -620,40 +626,40 @@ body {
 }
 
 .card-title {
-    font-size: 1.5rem; /* Title size */
-    margin-bottom: 0.5rem; /* Space below title */
-    font-weight: bold; /* Make title bold */
+    font-size: 1.5rem; 
+    margin-bottom: 0.5rem; 
+    font-weight: bold; 
 }
 
 .card-description {
-    color: #b4b4b4; /* Description text color */
-    margin-bottom: 1rem; /* Space below description */
+    color: #b4b4b4; 
+    margin-bottom: 1rem; 
 }
 
 .card-links {
     display: flex;
-    gap: 1rem; /* Space between links */
+    gap: 1rem; 
 }
 
 .card-link {
-    color: #ffffff; /* Link color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth transition for hover */
+    color: #ffffff; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
 }
 
 .card-link:hover {
-    color: #B4B4B4; /* Change color on hover */
+    color: #B4B4B4; 
 }
 
 .card-image {
-    flex: 2; /* Image takes more space */
+    flex: 2; 
 }
 
 .card-image img {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area */
-    border-radius: 12px; /* Rounded corners for the image */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 12px; 
 }
 
 .notification {
@@ -685,10 +691,4 @@ body {
         opacity: 0;
         visibility: hidden;
     }
-}
-
-.search-button {
-    display: inline-block;
-    text-decoration: none;
-    /* Gardez les styles existants du bouton */
 }
