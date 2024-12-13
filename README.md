@@ -73,12 +73,18 @@ Il s'agit d'une plateforme web présentant un service d'éco-mobilité innovant 
 ```
 project-root/
 ├── assets/
+│   └── icons/
+│   └── img/
+│   └── svg/
 │   └── fonts/
 │       └── stylesheet.css         # Définitions des polices Söhne
 ├── docs/
 │   └── realisation.mdx            # Documentation détaillée du projet
 ├── styles/
 │   └── styles.css                 # Styles globaux
+├── subpages                       # Sous pages du projet
+│   └── login.html
+│   └── profiles.html
 ├── index.html                     # Page principale
 └── README.md                      # Documentation du projet
 ```
