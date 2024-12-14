@@ -4,22 +4,38 @@
     <!-- Métadonnées -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choix du conducteur - OpenAI Covoiturage</title>
-    <link rel="stylesheet" href="./../css/styles.css">
+    <title>Vision des conducteurs - OpenAI Covoiturage</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+    <!-- Barre de navigation -->
     <nav class="tab-bar">
+        <div class="tab-bar-logo">
+            <img src="../assets/svg/logo-white.svg" alt="Logo">
+            <span>OpenAI</span>
+        </div>
+        <ul class="tab-bar-menu">
+            <li><a href="../index.html">Acceuil</a></li>
+            <li><a href="https://openai.com/chatgpt/overview/">Products</a></li>
+            <li><a href="https://openai.com/safety">Safety</a></li>
+            <li><a href="https://openai.com/about/">Company</a></li>
+        </ul>
+        <div class="tab-bar-login">
+            <a href="../subpages/login.html" class="login-button">Se connecter</a>
+        </div>
     </nav>
 
+    <!-- Contenu principal -->
     <main>
         <section class="profiles-section">
-            <h1>Sélectionnez un conducteur</h1>
+            <h1 class="title">Rencontrez nos conducteurs</h1>
+            <p class="subtitle">Découvrez les profils de nos conducteurs qui assurent vos trajets en toute sécurité.</p>
             <div class="profiles-list">
-                <!-- Exemple de profil -->
+                <!-- Carte de profil - Exemple 1 -->
                 <div class="profile-card">
-                    <img src="./assets/img/1.png" alt="Photo de profil">
+                    <img src="../assets/img/gorille.png" alt="Photo de profil">
                     <h2>Uge Chapelle</h2>
-                    <p>Voiture : Pegueot 307</p>
+                    <p>Voiture : Peugeot 307</p>
                     <p>Résidence : Paris</p>
                     <div class="profile-rating">
                         <span class="star">⭐</span>
@@ -28,12 +44,47 @@
                         <span class="star">⭐</span>
                         <span class="star">⭐</span>
                     </div>
-                    <button class="select-button">Choisir ce conducteur</button>
+                </div>
+
+                <!-- Carte de profil - Exemple 2 -->
+                <div class="profile-card">
+                    <img src="../assets/img/2.jpeg" alt="Photo de profil">
+                    <h2>Evan Delepine</h2>
+                    <p>Voiture : Renault Clio</p>
+                    <p>Résidence : Lyon</p>
+                    <div class="profile-rating">
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                    </div>
+                </div>
+
+                <!-- Carte de profil - Exemple 3 -->
+                <div class="profile-card">
+                    <img src="../assets/img/3.jpg" alt="Photo de profil">
+                    <h2>Camille Delfosse</h2>
+                    <p>Voiture : Citroën C4</p>
+                    <p>Résidence : Marseille</p>
+                    <div class="profile-rating">
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Pied de page -->
     <footer class="footer">
+        <div class="footer-container">
+            <p class="copyright">OpenAI © 2015-2024</p>
+            <p><a href="#">Politique de confidentialité</a></p>
+        </div>
     </footer>
 </body>
 </html>

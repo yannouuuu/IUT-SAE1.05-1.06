@@ -17,17 +17,13 @@
             <span>OpenAI</span>
         </div>
         <ul class="tab-bar-menu">
-            <li><a href="#">Research</a></li>
-            <li><a href="#">Products</a></li>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="https://openai.com/chatgpt/overview/">Products</a></li>
             <li><a href="https://openai.com/safety">Safety</a></li>
-            <li><a href="#">Company</a></li>
+            <li><a href="https://openai.com/about/">Company</a></li>
         </ul>
-        <div class="tab-bar-search">
-            <!-- Icône de recherche -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" viewBox="0 0 24 24">
-                <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
-                <line x1="17" y1="17" x2="22" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+        <div class="tab-bar-login">
+            <a href="../subpages/login.html" class="login-button">Se connecter</a>
         </div>
     </nav>
 
@@ -60,11 +56,24 @@
                         <div class="form-group">
                             <label for="time">Heure</label>
                             <input type="time" id="time" name="time">
-                        </div>
+                        </div>   
                     </div>
-                    <a href="#notification" class="search-button">Organiser le covoiturage</a>
+                    <div class="form-group">
+                        <label for="driver">Choisissez un chauffeur</label>
+                        <select id="driver" name="driver" required>
+                            <option value="">Sélectionnez un chauffeur</option>
+                            <option value="john">Uge Chapelle</option>
+                            <option value="jane">Evan Delepine</option>
+                            <option value="paul">Camille Delfosse</option>
+                        </select>
+                        <a href=../subpages/profiles.html" class="profile-button">Voir les profils</a>
+                    </div> 
+                    
+                    <button type="submit" class="search-button">Valider</button>
                 </form>
-                <div id="notification" class="notification">Vous avez cliqué sur le bouton</div>
+            </div>
+        </div>
+        <div id="notification" class="notification">Votre demande à été validé.</div>
             </div>
             <div class="map-placeholder">
                 <!-- Carte OpenStreetMap intégrée avec iframe -->
